@@ -6,7 +6,8 @@ while IFS= read -r line
 do
   echo -e "\n $line\n" | boxes -d dog|lolcat
   
-  sleep 2
+  read -s key < /dev/tty
+  #sleep 2
 
 done < "$INPUT_FILE"
 
